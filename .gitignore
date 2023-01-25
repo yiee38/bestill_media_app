@@ -3,3 +3,4 @@
 package-lock.json
 Brewfile
 Dockerfile
+.DS_Store
