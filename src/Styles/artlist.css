@@ -1,0 +1,26 @@
+.art-list-container {
+    flex-direction: row;
+    justify-content: space-between; 
+    padding: 20px 94px 69px; 
+}
+
+.art-list-info-left {
+    width: 30%;
+}
+
+.art-list-info-right {
+    width: 70%;
+}
+
+@media (max-width: 950px) {
+    .art-list-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 30px 45px;
+    }
+
+    .art-list-info-left,  .art-list-info-right {
+        width: 100%;
+    }
+    
+}

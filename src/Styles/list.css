@@ -1,0 +1,19 @@
+.artist-list{
+    flex: 1;
+    width: 100%;
+    padding: 69px 94px 69px 94px;
+    min-height: 100%;
+}
+
+@media (max-width: 950px) {
+    .artist-list{
+        padding: 30px 45px;
+    }
+    
+}
+
+@media (max-width: 580px) {
+    .artist-list{
+        padding: 30px 45px;
+    }
+}

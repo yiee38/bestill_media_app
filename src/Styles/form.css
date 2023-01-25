@@ -1,0 +1,63 @@
+#artist-info-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--font-small);
+}
+
+#artist-info-form input,select {
+    background-color: var(--bg-color-primary);
+    color: var(--font-color-primary);
+    border: 1px solid var(--font-color-primary);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+
+    width: 100%;
+    padding: 5px;
+    font-size: var(--font-small);
+}
+
+#artist-info-form input:focus, select:focus {
+    outline: none;
+}
+
+#artist-info-form select div {
+    margin: 0;
+}
+
+.art-form-action{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.art-form-action button {
+    font-size: var(--font-medium);
+    border-radius: 0;
+    /*border: 1px solid var(--font-color-primary);*/
+}
+
+#artist-info-form label {
+    font-size: var(--font-medium);
+    color: var(--color-subtitles);
+}
+
+.artist-form-subtitle {
+    font-size: var(--font-large);
+}
+
+
+@media (max-width: 950px) {
+    #artist-info-form label {
+        font-size: var(--font-small);
+    }
+}
+
+@media (max-width: 580px) {
+    #artist-info-form label {
+        font-size: var(--font-small);
+    }
+    
+}
