@@ -60,7 +60,6 @@ export default function FileList(props){
         const folderName = convertArtName(artist.art_name);
         const artistName = convertArtName(artist.name);
         const s3 = new AWS.S3({params: { Bucket: bucketName }});
-        console.log(file);
         
         s3.upload({
             Key: `${artistName}/${folderName}/${fileName}`,
@@ -118,7 +117,6 @@ export default function FileList(props){
     }
 
     const handleDelete = (file) => {
-        console.log(file);
         const newFiles = awsFiles.filter((item) => item.fname !== file.fname); 
         setAwsFiles(newFiles);
         deleteArtistFile(file);
@@ -126,9 +124,7 @@ export default function FileList(props){
 
     const handleSelectionChange = (event) => {
         setSelected(event.target.value);
-        console.log(event.target.value)
         const fileType = getFileTypes(event.target.value);
-        console.log(fileType);
         setAccepted(fileType);
     }
     

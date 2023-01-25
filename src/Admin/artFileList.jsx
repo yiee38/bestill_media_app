@@ -5,37 +5,6 @@ import FileListItem from "../Components/ArtFileListItem";
 import { AnimatePresence, motion } from "framer-motion"
 
 export default function ArtFileList(props){
-    //const [file, setFile] = useState(null);
-    //const fileInputRef = useRef(null);
-
-    //const bucketName = 'yilubestillbucket';
-    /*
-    function compareFileTypes(a, b) {
-        var ORDER = { 'music': 1, 'video': 2, 'image': 3, 'pdf': 4 };
-        return (ORDER[a['type']] || 0) - (ORDER[b['type']] || 0);
-    }
-    
-    */
-    /*
-    const uploadFile = (file) => {
-        const fileName = file.name;
-        const s3 = new AWS.S3({params: { Bucket: bucketName }});
-        console.log(file);
-        s3.upload({
-            Key: fileName,
-            Body: file,
-            ContentType: file.type,
-          }, function(error, data) {
-            if (error) {
-              console.error(`Error uploading file to S3: ${error.message}`);
-            } else {
-              console.log(`File uploaded to S3 successfully: ${data.Location}`);
-            }
-        });
-        
-    }
-    */
-
     const deleteArtistFile = (file) => {
         
        const filename = file.fname;

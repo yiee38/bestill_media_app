@@ -26,8 +26,6 @@ export default function TypeList(props){
     } 
 
     const handleClick = (artist) => {
-        console.log(artist);
-        
         //make api call to delete an artist
         const apiName = 'ArtistProfiles';
         const path = '/artist';

@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
-import {pdfjs} from "react-pdf";
 import Header from "./header"
 import '../Styles/personal.css'; 
 import AudioPlayer from "../Components/Player";
@@ -13,7 +12,6 @@ import { motion } from "framer-motion";
 import { convertArtName } from "../utils";
 import MyPdfViewer from "../Components/PdfRender";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 
 export default function PersonalPage(props){

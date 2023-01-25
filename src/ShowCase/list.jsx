@@ -24,7 +24,6 @@ export default function ArtistList(props){
 
         API.get(apiName, path, myInit)
         .then((response) => {
-            console.log('hi');
             setArtistList(response);
         })
         .catch((error) => {
@@ -33,8 +32,6 @@ export default function ArtistList(props){
     } 
 
     const handleClick = (artist) => {
-        console.log(artist);
-        
         //make api call to delete an artist
         const apiName = 'ArtistProfiles';
         const path = '/artist';
@@ -59,38 +56,6 @@ export default function ArtistList(props){
         });
     }
 
-    /*
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(file);
-        uploadFile(file);
-        fileInputRef.current.value = '';
-    }
-
-    const onFileChange = (event) => {
-        setFile(event.target.files[0]);
-    }
-    */
-    /*
-    const uploadFile = (file) => {
-        const fileName = file.name;
-        const s3 = new AWS.S3({params: { Bucket: bucketName }});
-        console.log(file);
-        s3.upload({
-            Key: fileName,
-            Body: file,
-            ContentType: file.type,
-          }, function(error, data) {
-            if (error) {
-              console.error(`Error uploading file to S3: ${error.message}`);
-            } else {
-              console.log(`File uploaded to S3 successfully: ${data.Location}`);
-            }
-        });
-        
-    }
-    */
-    
     const deleteArtistFile = (file, artist) => {
         const filename = file.fname;
         const artistName = convertArtName(artist.name);
@@ -114,33 +79,19 @@ export default function ArtistList(props){
     const handleHideForm = () => {
         setShowForm(false);
     }
-    
-    /*
-    const handleFormSubmit = (event) => {
-        event.preventDefault();
-        setShowForm(false);
-    };
-    
-    const handleDelete = () => {
-        deleteArtistFile({type:'image', fname: 'trek.jpeg'});
-    }
-    */
 
     const handleAdded = (artist) => {
-        console.log(artist);
         const newArtist = []
         artistList.forEach((a, _) => {
             newArtist.push(a)
         })
         newArtist.push(artist);
-        console.log(newArtist);
         setArtistList(newArtist);
         setShowForm(false);
     }
 
     useEffect(()=>{
         pinAws();
-        console.log(process.env.REACT_APP_HELLO);
 	}, [])
 
     return (
